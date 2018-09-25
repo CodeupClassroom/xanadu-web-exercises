@@ -1,0 +1,99 @@
+/* Mobile and General CSS */
+
+body {
+	font-family: arial;
+	margin: 1% 2%;
+}
+h1 {
+	text-align: center;
+	font-size: 3em;
+}
+img {
+	width: 100%;
+}
+nav {
+	text-align: center;
+}
+ul {
+	padding: 0;
+}
+li {
+	list-style: none;
+	background-color: #ddd;
+	margin-bottom: 10px;
+	padding: 0;
+}
+footer {
+	margin-top: 200px;
+}
+li>a {
+	display: block;
+	width: 100%;
+	padding: 20px 0;
+}
+.hidden-on-mobile {
+	text-align: center;
+	margin-top: 30px;
+	width: 100%;
+}
+.hidden-on-mobile a {
+	background-color: azure;
+	padding: 20px 0;
+	display: block;
+	font-style: normal;
+	border: 1px solid grey;
+}
+.hidden-on-mobile a:visited,
+.hidden-on-mobile a:link {
+	text-decoration: none;
+}
+.sub-section {
+	margin-top: 50px;
+	font-style: italic;
+}
+.main>p {
+	padding-right: 40px;
+}
+
+/* Tablet and Desktop */
+@media screen and (min-width:768px) {
+    body {
+    	padding-bottom: 100px;
+		margin: 0 auto;
+		max-width: 890px;
+    }
+	h1 {
+		text-align: left;
+		font-size: 2.5em;
+		float: left;
+	}
+	img {
+		margin-top: 40px;
+	}
+	nav {
+		float: right;
+	}
+	li {
+		float: left;
+		margin-left: 30px;
+		list-style: none;
+		padding: 0;
+		background-color: white;
+	}
+	section {
+		float: left;
+	}
+	footer {
+		margin-top: 200px;
+	}
+    .hidden-on-mobile {
+		display: none;
+	}
+	.main {
+		width: 60%;
+	}
+	.sub-section {
+		width: 40%;
+		margin-top: 0;
+	}
+}
