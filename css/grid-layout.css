@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.row {
+    width:100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    /*padding: 1em;*/
+    float: left;
+}
+.full,
+.two-thirds,
+.one-half,
+.one-third,
+.one-fourth,
+.one-sixth,
+.one-eighth {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .two-thirds {width: 66.6666%;}
+    .one-half {width: 50%;}
+    .one-third {width: 33.3333%;}
+    .one-fourth {width: 25%;}
+    .one-sixth {width: 16.6666%;}
+    .one-eighth {width: 12.5%;}
+    .one-half-offset {
+        margin-left: 50%;
+    }
+}
