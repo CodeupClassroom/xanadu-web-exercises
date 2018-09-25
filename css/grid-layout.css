@@ -13,11 +13,11 @@
     width:100%;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+/*.row:after {*/
+    /*content: "";*/
+    /*display: table;*/
+    /*clear: both;*/
+/*}*/
 
 .column {
     /*padding: 1em;*/
