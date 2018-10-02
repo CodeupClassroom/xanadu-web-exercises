@@ -1,12 +1,12 @@
 "use strict";
 
-console.log("Hello from external JavaScript");
+    console.log("Hello from external JavaScript");
 
-alert('Welcome to my Website!');
+    alert('Welcome to my Website!');
 
-var userFavColor = prompt("Please enter your fav color: ");
+    var userFavColor = prompt("Please enter your fav color: ");
 
-alert("I love" + " " + userFavColor + " " + "too!");
+    alert("I love" + " " + userFavColor + " " + "too!");
 
 
 // ============================= Movie Rental
@@ -20,7 +20,10 @@ var littleMermaidDays = prompt("How many days will The Little Mermaid be rented?
 var brotherBearDays = prompt("How many days will Brother Bear be rented?");
 var herculesDays = prompt("How many days will Hercules be rented?");
 
-var totalRentalCost = (parseFloat(littleMermaidDays) + parseFloat(brotherBearDays) + parseFloat(herculesDays)) * parseFloat(rentalPerDayDollars);
+var totalRentalCost = (parseFloat(littleMermaidDays)
+    + parseFloat(brotherBearDays)
+    + parseFloat(herculesDays))
+    * parseFloat(rentalPerDayDollars);
 
 alert("The total will be $" + totalRentalCost.toFixed(2));
 
