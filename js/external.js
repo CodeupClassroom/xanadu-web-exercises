@@ -64,11 +64,14 @@ alert("Student enrollment status: " + studentEnrolled);
 // and the offer has not expired. Premium members do not need to buy a specific amount of products.
 // Use the following code to follow the instructions below:
 
-var numberOfItemsForDiscount = prompt("How many items must be bought for discount?");
+var discountBreakPoint = 2;
 var numberOfItems = prompt("How many items were bought?");
 var offerIsNotExpired = confirm("Confirm offer has not expired.");
 var isPremiumMember = confirm("Customer is a premium member");
 
-var productDiscountIsApplied = isPremiumMember || (numberOfItems >= numberOfItemsForDiscount && offerIsNotExpired);
+var productDiscountIsApplied = offerIsNotExpired && (isPremiumMember || numberOfItems >= discountBreakPoint);
 
 alert("Product discount applied: " + productDiscountIsApplied);
+
+
+
