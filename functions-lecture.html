@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Lecture</title>
+</head>
+<body>
+
+    <h1>Functions!</h1>
+
+    <script>
+
+
+        // Using Functions...
+
+            // alert("Test");
+            // var two = parseFloat("2"); // returns 2
+            // console.log(two);
+            //
+            // console.log(parseFloat("2"));
+
+
+
+
+        // Defining Functions...
+
+            // function declaration
+
+                // function returnAllCapsString(input) {
+                //     return input.toUpperCase();
+                // }
+                //
+                // var someValue = returnAllCapsString('first');
+                //
+                // console.log(someValue);
+
+            // function expression
+
+                // var returnAllCapsString = function(input) {
+                //     return input.toUpperCase();
+                // };
+                //
+                // var someValue = returnAllCapsString('first');
+                //
+                // console.log(someValu e);
+
+            // function with no defined return output
+
+                // function noDefinedOutput() {
+                //     var number = 2 + 2;
+                //     return number;
+                // }
+                //
+                // console.log(noDefinedOutput());
+
+
+            // make a function that adds two inputs and returns the output
+
+                // don't USE console.log instead of return!
+                // function badFunction(num1, num2) {
+                //     console.log(num1 + num2);
+                // }
+                //
+                // console.log(badFunction(2, 2));
+
+            // function with no defined input
+
+                // function doSomething() {
+                //     return "hi";
+                // }
+                //
+                // console.log(doSomething('asdf'));
+                //
+
+                //
+                // doSomething(2);
+                //
+                // function add(input1, input2) {
+                //     return input1 + input2;
+                // }
+                //
+                // var output1 = add();
+                // console.log(output1);
+                //
+                // var output2 = add(2, 2);
+                // console.log(output2);
+                //
+                // var output3 = add(2, 2, 2);
+                // console.log(output3);
+                //
+                // var output4 = add(2);
+                // console.log(output4);
+
+        // Arguments / Parameters...
+
+            // var argument = "Justin";
+            //
+            // function sayName(parameter) {
+            //     return "Well hello, " + parameter;
+            // }
+            //
+            // sayName(argument);
+            //
+
+
+
+        // *** make a function, countLetters() that takes in a string of a name and returns how many characters are in the string (not including trailing and ending whitespace); test the function
+
+        // function takes in a string
+
+        // get rid of white space
+
+        // store the count of the characters
+
+
+        // return a number for count of characters
+
+        // function countLetters(input) {
+        //     var output = 0;
+        //     var strippedWhitespace = input.trim();
+        //     output += strippedWhitespace.length;
+        //     return output;
+        // }
+        //
+        // console.log(countLetters('  xanadu  ')); // 6
+
+
+
+        // *** make a function, hasLetterA() that takes in a string and returns true if the string contains "a" and false if it does not; test the function
+
+
+
+        // function hasLetterA(strInput) {
+        //     var output;
+        //     // search string for letter "a"
+        //     output = strInput.indexOf('a') !== -1;
+        //     return output; // boolean
+        // }
+
+            // function hasLetterA(strInput) {
+            //     return strInput.indexOf('Ant') >= 0;
+            // }
+            //
+            // console.log(hasLetterA(' cat '));
+
+
+        // Anonymous Functions...
+
+            // using in a function
+
+            function sayName(someFunction) {
+                return "Hello " + someFunction();
+            }
+
+            // function returnJustin() {
+            //     return "Justin";
+            // }
+
+            // var value = sayName(returnJustin);
+
+            // var value = sayName(function() {
+            //     return "Justin";
+            // });
+            //
+            // console.log(value);
+
+
+        // Scope...
+
+            var globalVar = "bob";
+
+            function testFunction() {
+                return globalVar;
+            }
+
+            console.log(testFunction());
+
+
+
+        // IIFE...
+
+
+
+
+    </script>
+
+</body>
+</html>
