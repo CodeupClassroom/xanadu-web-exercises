@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>"someString".split()</h1>
+<h1>["Some", "array"].join()</h1>
+<script>
+    var string = "name, email\nCaroline Cummings,cacnoj@dus.cc\nCecilia Allison,ba@guwoftic.aw\nLogan Lee,tehaewu@walih.cv\nMitchell Medina,co@ogjij.tm\nEsther Duncan,bo@evehul.sa\nMatthew Moran,sor@zazakem.gi\nCarrie Hodges,ku@wa.hn\nMilton Francis,guh@woded.sr";
+
+    array = string.split("\n");
+
+    var columnNames = array.shift();
+    columnNames = columnNames.split(", ");
+
+    var htmlString = "<table><tr><th>" + columnNames[0] + "</th><th>" + columnNames[1] + "</th></tr>";
+
+    array.forEach(function(line) {
+       var pieces = line.split(",");
+
+       htmlString += "<tr>"
+            + "<td>" + pieces[0] + "</td>"
+            + "<td>" + pieces[1] + "</td></tr>";
+    });
+
+    document.body.innerHTML += htmlString;
+
+</script>
+</body>
+</html>
