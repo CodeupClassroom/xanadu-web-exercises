@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects Intro</title>
+</head>
+<body>
+
+    <h1>Intro to Objects</h1>
+
+<script>
+    "use strict";
+
+    // Object Defined
+
+        // Like a named index array
+        // Often used to store related state and behavior
+        // Where arrays are good for storing lists of data, objects store related aspects of a greater structure
+        // We have already used objects: String, Array, Math, Number
+
+
+    // Custom Objects (dog, user, forecast, dictionaryEntry, movie, post, etc.)
+
+
+        // New Object Instance
+
+            // var dog = new Object();
+            //
+            // console.log(typeof dog);
+
+
+        // Object Literal Notation
+
+            var dog = {};
+
+            // console.log(typeof dog);
+
+
+    // Setting Properties on a Custom Object
+
+        // create a pet object that has the following properties...
+            // string name
+            // number age
+            // string species
+            // boolean hasOffspring
+            // number valueInDollars
+
+        // var pet = {};
+        //
+        // pet.name = "Sparkles";
+        // pet.age = 100;
+        // pet.species = "Unicorn";
+        // pet.hasOffSpring = false;
+        // pet.valueInDollars = 1000000000;
+        //
+        // var pet2 = {
+        //     name: "Tinkles",
+        //     age: 4,
+        //     species: "Komoto Dragon",
+        //     hasOffSpring: true,
+        //     valueInDollars: 6
+        // };
+        //
+        // pet2.isHungry = true;
+        // console.log(pet2);
+
+
+
+
+        // create HTML called object-test.html
+        /*
+            Create a blogPost object with properties for...
+
+                author
+                averageRating (1-5)
+                datePosted
+                title
+                noOfShares
+                noOfViews
+                isFlagged
+                lastUpdated
+                content
+
+            Create the object using dot syntax
+            Create the object using everything inside {} syntax
+            Log the object to check if it was created correctly
+         */
+
+        // var blogPost = {};
+        //
+        // blogPost.author = "Fred Sanders";
+        // blogPost.averageRating = 2.5;
+        // blogPost.datePosted = "September 1, 2005";
+        // blogPost.title = "A Day in the Life";
+        // blogPost.noOfShares = 1002;
+        // blogPost.noOfViews = 200230;
+        // blogPost.isFlagged = false;
+        // blogPost.lastUpdated = "October 1, 2017";
+        // blogPost.content = "blah blah blah blah blah";
+        //
+        // console.log(blogPost);
+        //
+        // var otherBlogPost = {
+        //     author: "Fred Sanders",
+        //     averageRating: 2.5,
+        //     datePosted: "September 1, 2005",
+        //     title: "A Day in the Life",
+        //     noOfShares: 1002,
+        //     noOfViews: 200230,
+        //     isFlagged: false,
+        //     lastUpdated: "October 1, 2017",
+        //     content: "blah blah blah blah blah"
+        // };
+        //
+        // console.log(otherBlogPost);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // Accessing Properties on an Object
+
+    // var otherBlogPost = {
+    //     author: "Fred Sanders",
+    //     averageRating: 2.5,
+    //     datePosted: "September 1, 2005",
+    //     title: "A Day in the Life",
+    //     noOfShares: 1002,
+    //     noOfViews: 200230,
+    //     isFlagged: false,
+    //     lastUpdated: "October 1, 2017",
+    //     content: "blah blah blah blah blah"
+    // };
+    //
+    //
+    // otherBlogPost.title = "Hello World";
+    //
+    // console.log(otherBlogPost.title);
+
+
+
+
+    // Nested Values
+
+        // Add the following to a pet object...
+            // altNames
+            // vitals: averageTemp, restingHeartRate, isHungry
+
+    var pet3 = {
+        name: "Bowser",
+        age: 6,
+        species: "dog",
+        hasOffSpring: false,
+        valueInDollars: "priceless",
+        altNames: [
+            "Bowser Boy",
+            "Bowser Buddy",
+            "Bowser Man"
+        ],
+        vitals: {
+            averageTemp: 101,
+            restingHeartRate: 80,
+            isHungry: true
+        }
+    };
+        // log if Bowser is hungry
+        // console.log(pet3.vitals.isHungry);
+        //
+        // // log Bowser's average heartRate
+        // console.log(pet3.vitals.restingHeartRate);
+        //
+        // // log Bowser's most recent alternative name
+        // console.log(pet3.altNames[pet3.altNames.length - 1]);
+        //
+        // // change age to 7 and isHungry to false
+        // pet3.age = 7;
+        //
+        // console.log(pet3.age);
+        //
+        // pet3.vitals.isHungry = false;
+        //
+        // console.log(pet3.vitals.isHungry);
+        //
+        // console.log(pet3);
+        //
+        // pet3.altNames.pop();
+        // console.log(pet3);
+        //
+        // delete pet3.age; // remove a property on an object
+        //
+        // console.log(pet3);
+
+    // Arrays of Objects... (users)
+
+        var users = [
+            {
+                name: "Kyle",
+                age: 12
+            },
+            {
+                name: "Fred",
+                age: 33
+            },
+            {
+                name: "Zach",
+                age: 25
+            }
+        ];
+
+
+        // console.log(users[0].name);
+        // console.log(users[1].age);
+
+        function convertYearsToMonths(years) {
+            return years * 12;
+        }
+
+        // function updateUsers(userObjects) {
+        //
+        //     // using for Loop
+        //     // for (var i = 0; i < userObjects.length; i += 1) {
+        //     //     userObjects[i].age = convertYearsToMonths(userObjects[i].age);
+        //     // }
+        //
+        //     // using forEach loop
+        //     userObjects.forEach(function(user) {
+        //         user.age = convertYearsToMonths(user.age);
+        //     });
+        // }
+        //
+        // updateUsers(users);
+
+        // console.log(users);
+
+
+        // using forEach to change array
+        //     var numbers = [
+        //         7,
+        //         35,
+        //         10
+        //     ];
+        //
+        //     numbers.forEach(function(number, index) {
+        //         numbers[index] = 5;
+        //     });
+        //
+        //     console.log(numbers);
+
+
+
+
+    // Assigning Functionality to an Object
+
+        // var pet4 = {
+        //     name: "Pickles",
+        //     age: 20,
+        //     species: "horse",
+        //     eat: function(food) {
+        //         console.log("nom nom nom " + food);
+        //     }
+        // };
+        //
+        // pet4.eat("carrots");
+        //
+        // pet4.gallop = function() {
+        //     console.log("click clack");
+        // };
+        //
+        // pet4.gallop();
+
+
+
+
+    // The this Keyword
+      // why use this vs. the object name: https://stackoverflow.com/questions/12799702/javascript-this-versus-object-name
+
+    // function getOlder() {
+    //     pet.age += 1;
+    // }
+    //
+    // var pet = {
+    //     name: "Sparky",
+    //     age: 3,
+    //     getOlder: getOlder
+    // };
+    //
+    // console.log(pet.age);
+    // pet.getOlder();
+    // console.log(pet.age);
+    //
+
+    function getUserObject() {
+        var user = {};
+        user.name = prompt("What is your name?");
+        user.age = prompt("How old are you?");
+        user.checkIfMinor = function (ageOfAdult) {
+            return this.age >= ageOfAdult;
+        };
+        return user;
+    }
+
+    var loggedInUser = getUserObject();
+
+    alert("Hi, " + loggedInUser.name + "!");
+
+    var message = loggedInUser.checkIfMinor(18) ? "You are an adult" : "You are a minor";
+
+    alert(message);
+
+
+
+
+
+
+    // this (advanced use cases)
+
+        // =================== Example 1 - using this in the global scope
+
+        // console.log(this); // global Window object in the browser
+
+
+        // =================== Example 2 - using this inside a function
+
+        // function thisTest() {
+        //     console.log(this);
+        // }
+        //
+        // thisTest(); // undefined
+
+
+        // =================== Example 3 - using this inside a method of an anonymous function
+
+        // var test = {
+        //     name: "Billy Bob"
+        // };
+        //
+        // test.someFunction = function() {
+        //     console.log(this);
+        // };
+        //
+        // test.someFunction(); // refers to the calling object
+
+
+        // =================== Example 4 - using this inside a method assigned a callback function
+
+        // var test2 = {
+        //     price: 45
+        // };
+        //
+        // function someCallback() {
+        //     console.log(this);
+        // }
+        //
+        // test2.thisTest = someCallback;
+        //
+        // console.log(test2.thisTest()); // calling object
+
+
+
+        // =================== Example 5 - using this inside async called method
+
+        // function logThis() {
+        //     setTimeout(function() {
+        //         console.log(this);
+        //     }, 1000);
+        // }
+        //
+        // var someObject = {name: "bob"};
+        //
+        // someObject.asyncTest = logThis;
+        //
+        // someObject.asyncTest(); // refer to global window object
+
+
+
+        // =================== Example 6 - using this inside async called method with bind
+
+        // function logThis() {
+        //     setTimeout(function() {
+        //         console.log(this);
+        //     }.bind(), 1000); // bind the calling object to the annon function passed to setTimeout
+        // }
+        //
+        // var someObject = {name: "bob"};
+        //
+        // someObject.asyncTest = logThis;
+        //
+        // someObject.asyncTest(); // now refers to the calling object
+
+
+
+
+</script>
+
+</body>
+</html>
