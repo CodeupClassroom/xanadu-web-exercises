@@ -1,4 +1,4 @@
-// (function() {
+(function() {
     "use strict";
 
 /**
@@ -212,4 +212,34 @@
      *   `showBookInfo` function.
      */
 
-// })();
+    // function createBook(title, author) {
+    //     return {
+    //         title: title,
+    //         author: {
+    //             firstName: author.split(" ")[0],
+    //             lastName: author.split(" ")[1]
+    //         }
+    //     }
+    // }
+    //
+    // function showBookInfo(book, number) {
+    //     var message = "";
+    //     message += "Book # " + number + "\n";
+    //     message += "Title: " + book.title + "\n";
+    //     message += "Author: " + book.author.firstName + " " + book.author.lastName + "\n";
+    //     message += "---";
+    //     console.log(message);
+    // }
+    //
+    // var books = [];
+    // books.push(createBook("Book 1", "Some Author1"));
+    // books.push(createBook("Book 2", "Some Author2"));
+    // books.push(createBook("Book 3", "Some Author3"));
+    // books.push(createBook("Book 4", "Some Author4"));
+    // books.push(createBook("Book 5", "Some Author5"));
+    //
+    // books.forEach(function(book, index) {
+    //     showBookInfo(book, index + 1);
+    // });
+
+})();
