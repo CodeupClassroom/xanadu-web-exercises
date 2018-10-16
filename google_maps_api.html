@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maps</title>
+    <style>
+        #map-container{
+            width: 90%;
+            height: 90vh;
+            background-color: #3B94D9;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map-container">
+
+</div>
+
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
+<script src="https://maps.googleapis.com/maps/api/js?key="></script>
+<script>
+
+    (function() {
+        "use strict";
+
+        const myFav = {
+            lat:  29.4265744,
+            lng: -98.4941328
+        };
+
+        // Set our map options
+        var mapOptions = {
+            // Set the zoom level
+            zoom: 19,
+
+            // This sets the center of the map at our location
+            center: myFav
+        };
+
+        // Render the map
+        var map = new google.maps.Map(document.getElementById("map-container"), mapOptions);
+
+        // Add the marker to our existing map
+        var zocalo = new google.maps.Marker({
+            position: myFav,
+            map: map
+        });
+
+        // Create a new infoWindow object with content
+        var infowindow = new google.maps.InfoWindow({
+            content: "The pozole in downtown " +
+                "<br>" +
+                "<img src='https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.myrecipes.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2Frecipes%2Fsl%2F13%2F02%2Fpozole-sl-x.jpg%3Fitok%3DEWrd71Yj&w=1000&q=70'>",
+            height: '100vh'
+
+        });
+
+// Open the window using our map and marker
+        infowindow.open(map, zocalo);
+
+    })();
+
+</script>
+
+
+</body>
+</html>
