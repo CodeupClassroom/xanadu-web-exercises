@@ -6,6 +6,11 @@
 </head>
 <body>
 
+<button id="changeMainHeader">Change Main Header</button>
+<button id="changeSubHeader">Change Sub Header</button>
+<button id="changeUl">Change Unordered List</button>
+<button id="changePara">Change Paragraph</button>
+
 <h1 id="main-header">Hello World!</h1>
 <ul>
     <li data-dbid="1">Item 1</li>
@@ -28,43 +33,82 @@
 <script>
     (function() {
         "use strict";
-        // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById('main-header');
+        // // TODO: Uncomment next line and get the main header element by id
+        // var mainHeader = document.getElementById('main-header');
+        //
+        // // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        // mainHeader.innerHTML = "JavaScript is Cool";
+        //
+        // // TODO: Uncomment the next line and get the sub header element by id
+        // var subHeader = document.querySelector("#sub-header");
+        // // console.log(subHeader);
+        //
+        // // TODO: Set the text color of subHeader to blue
+        // subHeader.style.color = "blue";
+        //
+        // // TODO: Uncomment the next line and get all list items
+        // var listItems = document.getElementsByTagName("li");
+        // // console.log(listItems);
+        //
+        //
+        // for (var i = 0; i < listItems.length; i += 1) {
+        //     console.log(listItems[i].getAttribute("data-dbid"));
+        //     // TODO: Set text color of li with dbid = 1 to blue
+        //     if (listItems[i].getAttribute("data-dbid") === "1") {
+        //         listItems[i].style.color = "blue";
+        //     // TODO: Set text color on every other list item to grey
+        //     } else if (i % 2 === 0) {
+        //         listItems[i].style.color = "grey";
+        //     }
+        //
+        // }
+        //
+        // // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+        // var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        //
+        // console.log(subParagraphs);
+        //
+        // // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        // subParagraphs[0].innerText = "Mission Accomplished!";
+        //
 
-        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+        // ======================================= SOLUTION for DOM EVENTS
 
-        // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.querySelector("#sub-header");
-        // console.log(subHeader);
+        var changeMainHeaderBtn = document.getElementById('changeMainHeader');
+        var changeSubHeaderBtn = document.querySelector('#changeSubHeader');
+        var changeUlBtn = document.getElementById('changeUl');
+        var changeParaBtn = document.getElementById('changePara');
 
-        // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = "blue";
-
-        // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName("li");
-        // console.log(listItems);
-
-
-        for (var i = 0; i < listItems.length; i += 1) {
-            console.log(listItems[i].getAttribute("data-dbid"));
-            // TODO: Set text color of li with dbid = 1 to blue
-            if (listItems[i].getAttribute("data-dbid") === "1") {
-                listItems[i].style.color = "blue";
-            // TODO: Set text color on every other list item to grey
-            } else if (i % 2 === 0) {
-                listItems[i].style.color = "grey";
-            }
-
+        function changeMainHeader() {
+            var mainHeader = document.getElementById('main-header');
+            mainHeader.innerHTML = "JavaScript is Cool";
         }
 
-        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName('sub-paragraph');
+        function changeSubHeader() {
+            var subHeader = document.querySelector("#sub-header");
+            subHeader.style.color = "blue";
+        }
 
-        console.log(subParagraphs);
+        function changeListItems() {
+            var listItems = document.getElementsByTagName("li");
+            for (var i = 0; i < listItems.length; i += 1) {
+                if (listItems[i].getAttribute("data-dbid") === "1") {
+                    listItems[i].style.color = "blue";
+                } else if (i % 2 === 0) {
+                    listItems[i].style.color = "grey";
+                }
+            }
+        }
 
-        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
+        function changeParagraph() {
+            var subParagraphs = document.getElementsByClassName('sub-paragraph');
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        }
+
+        changeMainHeaderBtn.addEventListener("click", changeMainHeader);
+        changeSubHeaderBtn.addEventListener("click", changeSubHeader);
+        changeUlBtn.addEventListener("click", changeListItems);
+        changeParaBtn.addEventListener("click", changeParagraph);
 
     })();
 </script>
