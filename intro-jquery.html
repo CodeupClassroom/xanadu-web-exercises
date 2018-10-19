@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+
+    </style>
 
 </head>
 <body>
@@ -11,12 +14,30 @@
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aliquid, beatae commodi consequuntur eos esse est fugiat illum iste mollitia nobis optio sint sunt suscipit unde velit voluptas, voluptates?</p>
 
+<p id="uniqueP">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur ducimus fugiat magnam maxime natus neque optio, quidem repudiandae? Aliquid aperiam culpa cumque dolorem eum facilis modi mollitia nemo quibusdam ratione!
+</p>
+
+<div class="xanadu">Part of the group n2</div>
+<h5 class="xanadu">Part of the group n1</h5>
+<h6 class="xanadu">Part of the group n3</h6>
+
 <script src="js/jquery-2.2.4.min.js"></script>
 <script>
     "use strict";
     $(document).ready(function(){
         console.log('doc',$(document));
-        alert("Hello jQuery");
+        // alert("Hello jQuery");
+
+        // Element name selector
+        $('h1').css('color', 'blue');
+
+        // ID selector
+        $('#uniqueP').css('color', 'purple');
+
+        // Class selector
+        $('.xanadu').css('color', 'red');
+
     });
 </script>
 
