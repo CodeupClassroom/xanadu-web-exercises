@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Methods Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <style type="text/css">
+
+        .frame {
+            border: 10px solid brown;
+            height: 250px;
+        }
+
+        .picture1 {
+            background-image: url("img/denali1.jpg");
+            background-size: cover;
+        }
+
+        .picture2 {
+            background-image: url("img/denali2.jpg");
+            background-size: cover;
+        }
+
+        .picture3 {
+            background-image: url("img/denali3.jpg");
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+<main class="container">
+
+    <!-- jQuery Traversal Bonus -->
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <div class="frame picture1"></div>
+            <button id="leftSwapBtn" class="pictureBtn btn btn-warning">Swap</button>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="frame picture2"></div>
+            <button id="middleSwapBtn" class="pictureBtn btn btn-warning">Swap</button>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="frame picture3"></div>
+            <button id="rightSwapBtn" class="pictureBtn btn btn-warning">Swap</button>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+    // Traversal exercise
+    $(document).ready(function() {
+
+        // =============================================== TRAVERSAL BONUS
+
+        /*
+            complete the following click events to create the following functionality
+                - clicking the left-most swap button will cause the left and middle images to swap places
+                - clicking the right-most swap button will cause the right and middle images to swap places
+                - clicking the middle swap button will cause the left or right images to swap with the middle randomly
+         */
+
+        $('#leftSwapBtn').click(function() {
+            var oldClass = $(this).prev().attr("class").split(" ")[1];
+            var newClass = $(this).parent().next().children().first().attr("class").split(" ")[1];
+            $(this).prev().attr("class", "frame " + newClass);
+            $(this).parent().next().children().first().attr("class", "frame " + oldClass)
+        });
+
+        $('#middleSwapBtn').click(function() {
+            var choice = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+            var frameChoice = (choice) ? $(this).parent().prev() : $(this).parent().next();
+            var oldClass = $(this).prev().attr("class").split(" ")[1];
+            var newClass = frameChoice.children().first().attr("class").split(" ")[1];
+            $(this).prev().attr("class", "frame " + newClass);
+            frameChoice.children().first().attr("class", "frame " + oldClass)
+        });
+
+        $('#rightSwapBtn').click(function() {
+            var oldClass = $(this).prev().attr("class").split(" ")[1];
+            var newClass = $(this).parent().prev().children().first().attr("class").split(" ")[1];
+            $(this).prev().attr("class", "frame " + newClass);
+            $(this).parent().prev().children().first().attr("class", "frame " + oldClass)
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
