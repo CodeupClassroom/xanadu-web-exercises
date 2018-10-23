@@ -76,6 +76,8 @@
     $(document).ready(function() {
         "use strict";
 
+        // ============================================== For Attributes Lesson
+
         // Toggle class
 
         $('#answer-btn').click(function() {
@@ -86,6 +88,28 @@
 
         $('dt').click(function() {
             $(this).css('background', 'yellow');
+        });
+
+        // ============================================== For Traversal Lesson
+
+        // Highlight last li of each ul element
+        var highlightBtn = $("#highlightBtn");
+
+        highlightBtn.click(function() {
+            $("ul").each(function(index, element) {
+                $(element).children().last().css("background-color", "yellow");
+            });
+        });
+
+        // Make h3 font bold on click
+        $("h3").click(function() {
+            $(this).next().css("font-weight", "bold");
+        });
+
+
+        // Make the first li turn blue when clicking an li
+        $("li").click(function() {
+            $(this).parent().children().first().css("color", "blue");
         });
 
 
