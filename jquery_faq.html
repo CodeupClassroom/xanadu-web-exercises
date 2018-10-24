@@ -19,6 +19,12 @@
 </head>
 <body>
 
+<h2 id="register-alert" class="invisible">Would you like to <a href="#">register</a>?</h2>
+
+<div id="subscribe">
+    <h1>Would you like to sign up for our newsletter? <span>X</span></h1>
+</div>
+
 <h1>Top Ten Questions about Glacier National Park</h1>
 
 <dl>
@@ -112,6 +118,17 @@
             $(this).parent().children().first().css("color", "blue");
         });
 
+        $('#subscribe').children().children('span').click(function(){
+            $('#subscribe').fadeOut();
+        });
+
+        $('dt').click(function(){
+            $(this).next().slideToggle();
+        });
+
+        setTimeout(function () {
+            $('#register-alert').fadeIn();
+        }, 8000);
 
     });
 
