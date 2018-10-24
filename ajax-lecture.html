@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+
+<script>
+
+
+    var x = {
+        "name1": "value1",
+        "name2": "value2"
+    }
+
+
+    var xanadu = [
+        {
+            "name": "Fer",
+            "dob": "05/03/1990"
+        },{
+            "name": "Justin",
+            "dob": "xx/xx/xxxx"
+        },{
+            "name": "Ana",
+            "dob": "03/04/1980"
+        }
+    ];
+
+    console.log('before');
+
+    $.ajax('https://frest.glitch.me/restaurants').done(function (data) {
+        console.error(data);
+
+    });
+
+    console.log('after');
+
+    // https://frest.glitch.me/restaurants
+
+</script>
+
+</body>
+</html>
