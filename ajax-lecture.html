@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+
+<script>
+
+    // $(document).ready(function() {
+
+        "use strict";
+
+        // ========================= FER INTRO TO AJAX
+
+        /*
+            var x = {
+                "name1": "value1",
+                "name2": "value2"
+            }
+
+
+            var xanadu = [
+                {
+                    "name": "Fer",
+                    "dob": "05/03/1990"
+                },{
+                    "name": "Justin",
+                    "dob": "xx/xx/xxxx"
+                },{
+                    "name": "Ana",
+                    "dob": "03/04/1980"
+                }
+            ];
+
+            console.log('before');
+
+            $.ajax('https://frest.glitch.me/restaurants').done(function (data) {
+                console.error(data);
+
+            });
+
+            console.log('after');
+
+            // https://frest.glitch.me/restaurants
+
+        */
+
+    // ========================= JUSTIN AJAX LECTURE NOTES
+
+    // simple request
+
+    // console.log($.ajax("data/orders.json"));
+
+    // $.ajax('data/orders.json').done(function(data) {
+    //     console.log(data);
+    // });
+
+    // won't work
+    //     var test;
+    //     $.ajax('data/orders.json').done(function(data) {
+    //        test = data;
+    //     });
+    //     console.log(test);
+
+
+    // single argument with .done(), .fail() and .always() methods
+
+    // $.ajax({
+    //     url: "https://swapi.co/ap/films",
+    //     type: "GET",
+    //     data: {
+    //         search: "A New Hope"
+    //     }
+    // }).done(function(data, status, jqXhr) {
+    //     console.log(data.results[0].director);
+    //     console.log(status);
+    //     console.log(jqXhr);
+    // }).fail(function(jqXhr, status) {
+    //     console.log(jqXhr);
+    //     console.log(status);
+    // }).always(function() {
+    //     console.log("Always runs")
+    // });
+    //
+
+
+
+
+
+
+
+
+
+
+
+    // Url first argument and configuration object second argument
+
+    // $.ajax("https://swapi.co/api/films", {
+    //     "type": "GET",
+    //     "data": {
+    //         "search": "A New Hope"
+    //     }
+    // }).done(function(data) {
+    //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+    // });
+
+
+    // Storing returned jQuery XML HTTP Response object
+
+
+    // var jqXhr = $.ajax("https://swapi.co/ap/films", {
+    //     "type": "GET",
+    //     "data": {
+    //         "search": "A New Hope"
+    //     }
+    // });
+    //
+    // jqXhr.done(function(data) {
+    //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+    // });
+    //
+    // jqXhr.fail(function() {
+    //     console.log("request failed");
+    // })
+
+
+    // GET short-hand method
+
+    // $.get("https://swapi.co/api/films", {
+    //     "data": {
+    //         "search": "A New Hope"
+    //     }
+    // }).done(function(data) {
+    //     console.log("The director of Star Wars: A New Hope is..." + data.results[0].director);
+    // });
+
+
+
+    // });
+
+
+</script>
+
+</body>
+</html>
