@@ -36,6 +36,13 @@ const users = [
         email: 'justin@codeup.com',
         languages: ['html', 'css', 'javascript', 'php'],
         yearsOfExperience: 9
+    },
+    {
+        id: 5,
+        name: 'justin',
+        email: 'justin@codeup.com',
+        languages: ['html', 'css', 'javascript', 'php'],
+        yearsOfExperience: 9
     }
 ];
 
@@ -86,3 +93,59 @@ console.log(longestEmail);
 
 
 // 6 Use reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
+// let initialValue = "";
+// users.forEach(user => {
+//     initialValue += user.name + ", ";
+// });
+// initialValue = initialValue.substring(0, initialValue.length-2) + ".";
+
+// let nameString = users.reduce((accumulator, user) => {
+//     return accumulator + user.name + ", ";
+// }, "");
+//
+// nameString = nameString.substring(0, nameString.length-2) + ".";
+//
+// console.log(nameString);
+
+
+let nameString = "Your instructors are: ";
+
+nameString += users.reduce((accumulator, user, index) => {
+    let lastChar = ", ";
+
+    if(index === users.length -1) {
+        lastChar = ".";
+    }
+
+    return accumulator + user.name + lastChar;
+
+}, "");
+
+console.log(nameString);
+
+
+// Use .map to produce a new array of objects containing only email and name
+const contactInfo = users.map(({name, email}) => {
+   return {
+       name,
+       email,
+       employer: "Codeup"
+   }
+});
+
+console.log(contactInfo);
+
+
+// Use reduce to get the unique list of languages from the list of users.
+let languages = users.reduce((accumulator, user) => {
+    user.languages.map(language => {
+       accumulator.push(language);
+    });
+    return accumulator;
+
+}, []);
+
+languages = new Set(languages);
+languages = Array.from(languages);
+
+console.log(languages);
