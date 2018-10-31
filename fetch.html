@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch demo</title>
+</head>
+<body>
+
+<h1>Fetch demo</h1>
+
+<script>
+    "use strict";
+
+    let request = fetch("fetch.html");
+
+    request.then(response => {
+        response.text().then(data => {
+            console.log(data);
+        });
+    });
+
+    request.catch(error => console.log(error));
+
+</script>
+</body>
+</html>
